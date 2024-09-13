@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Racers Report</title>
+</head>
+<body>
+    <h1>Racers Report</h1>
+    <p>Результаты гонок:</p>
+    <ul>
+        {% for result in report %}
+            <li>
+                <a href="{{ url_for('name_page', name=result.code) }}">{{ result.code }} </a> {{ result.team}}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
